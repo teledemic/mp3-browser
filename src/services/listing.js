@@ -1,7 +1,7 @@
 import axios from "axios";
 import cheerio from "cheerio";
 
-const ROOT_PATH = "http://fundamentalfrequency.com/jams";
+const ROOT_PATH = "/jams";
 
 export default class Listing {
 	static async GetDirectoryListing(path) {
