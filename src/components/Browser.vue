@@ -50,6 +50,12 @@ export default {
   },
   methods: {
     async UpdateListing() {
+      if (this.$route.path === "/") {
+        document.title = "FundamentalFrequency Jams";
+      } else {
+        let title = unescape(this.$route.path.replace(/^\/+|\/+$/g,''));
+        document.title = "FF Jams - " + title;
+      }
       const list = await Listing.GetDirectoryListing(this.$route.path);
       this.folders = list.folders;
       this.description = list.description;
