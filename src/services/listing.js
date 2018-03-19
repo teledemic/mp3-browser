@@ -16,8 +16,8 @@ export default class Listing {
 			const href = link.attribs.href;
 			if (href.startsWith("/")) {
 				// Skip parent link
-			} else if (href.endsWith(".jpg")) {
-				image = href;
+			} else if (href.endsWith(".jpg") || href.endsWith(".png")) {
+				image = ROOT_PATH + path + href;
 			} else if (href.endsWith("/")) {
 				folders.push({
 					name: unescape(href.slice(0, -1)),
