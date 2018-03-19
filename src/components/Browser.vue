@@ -91,6 +91,7 @@ export default {
 }
 table.song-player {
   margin: 0 auto;
+  width: 100%;
 }
 .aplayer-author {
   display: none;
