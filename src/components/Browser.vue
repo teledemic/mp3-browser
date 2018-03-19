@@ -59,7 +59,7 @@ export default {
           return {
             url: song.link,
             title: song.name,
-            pic: list.image || "/static/images/noart.jpg",
+            pic: list.image || "/images/noart.jpg",
           };
         });
       } else {
