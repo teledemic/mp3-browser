@@ -6,10 +6,9 @@ import VueAnalytics from "vue-analytics";
 Vue.config.productionTip = false
 
 Vue.use(VueAnalytics, {
-  id () {
-    return 'UA-2956540-2'
-  }
-})
+  id: "UA-2956540-2",
+});
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
