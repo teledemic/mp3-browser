@@ -9,11 +9,7 @@
 					<img :src="image">
 				</td>
 				<td>
-					<div v-if="description" class="description">
-						<pre>
-{{description}}
-						</pre>
-					</div>
+          <pre v-if="description">{{description}}</pre>
 					<div v-if="songs && songs.length" class="player">
 						<aplayer autoplay :music="songs[0]" :list="songs" mode="order"></aplayer>
 					</div>
@@ -53,7 +49,7 @@ export default {
       if (this.$route.path === "/") {
         document.title = "FundamentalFrequency Jams";
       } else {
-        let title = unescape(this.$route.path.replace(/^\/+|\/+$/g,''));
+        let title = unescape(this.$route.path.replace(/^\/+|\/+$/g, ""));
         document.title = "FF Jams - " + title;
       }
       const list = await Listing.GetDirectoryListing(this.$route.path);
@@ -65,7 +61,7 @@ export default {
           return {
             url: song.link,
             title: song.name,
-            pic: list.image || "/images/noart.jpg",
+            pic: list.image || "/images/noart.jpg"
           };
         });
       } else {
@@ -79,11 +75,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .folder-list {
-	font-size: 12px;
+  font-size: 12px;
 }
 .folder-item {
-	padding: 2px;
-	flex-basis: 20%;
+  padding: 2px;
+  flex-basis: 20%;
 }
 .player {
   width: 500px;
