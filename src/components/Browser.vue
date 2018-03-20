@@ -110,7 +110,7 @@ table.song-player {
     display: none;
   }
   .player {
-    width: 100%;
+    width: 90%;
   }
 }
 </style>
