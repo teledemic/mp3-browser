@@ -83,7 +83,7 @@ export default {
 }
 .player {
   width: 500px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 table.song-player {
   margin: 0 auto;
