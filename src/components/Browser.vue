@@ -84,6 +84,7 @@ export default {
 .player {
   width: 500px;
   margin: 20px auto;
+  margin-top: 50px;
 }
 table.song-player {
   margin: 0 auto;
