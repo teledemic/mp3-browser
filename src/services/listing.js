@@ -8,7 +8,7 @@ export default class Listing {
 		const response = await axios.get(ROOT_PATH + path);
 		const parsed = cheerio.load(response.data);
 		const description = parsed("pre").text();
-		const links = parsed("li a");
+		const links = parsed("td a");
 		let folders = [];
 		let songs = [];
 		let image;
